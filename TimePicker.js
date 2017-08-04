@@ -25,12 +25,12 @@ class TimePicker extends React.Component {
   constructor(props) {
     super(props);
     this.selectedDate = this.props.initDate ? new Date(this.props.initDate) : new Date();
-    const time12format = hourTo12Format(this.selectedDate.getHours());
+    const time = mapToFormat(this.selectedDate.getHours());
     this.hours = this.props.hours ? this.props.hours : getHoursArray(props.use24HourMode ?  23 : 12);
     this.minutes = this.props.minutes ? this.props.minutes : getFiveMinutesArray();
-    this.initHourInex = time12format[0] - 1;
+    this.initHourInex = time[0] - 1;
     this.initMinuteInex = Math.round(this.selectedDate.getMinutes() / 5);
-    this.initAmInex = time12format[1] === 'AM' ? 0 : 1;
+    this.initAmInex = time[1] === 'AM' ? 0 : 1;
   }
 
   renderAMPMPicker(){
@@ -116,7 +116,7 @@ class TimePicker extends React.Component {
 
   mapToFormat(hour){
     if(this.props.use24HourMode){
-      return hourTo24Format(hour);
+      return [hour, ''];
     } else {
       return hourTo12Format(hour);
     }
