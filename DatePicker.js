@@ -134,16 +134,6 @@ class DatePicker extends React.Component {
 
 }
 
-DatePicker.propTypes = {
-  initDate: React.PropTypes.string,
-  onDateSelected: React.PropTypes.func,
-  startDate: React.PropTypes.string,
-  daysCount: React.PropTypes.number,
-  days: React.PropTypes.array,
-  hours: React.PropTypes.array,
-  minutes: React.PropTypes.array,
-  format24: React.PropTypes.bool,
-};
 
 let styles = StyleSheet.create({
   container: {

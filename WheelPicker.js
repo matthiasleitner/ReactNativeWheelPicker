@@ -48,24 +48,5 @@ class WheelPicker extends React.Component {
      );
    }
 }
-WheelPicker.propTypes = {
-  ...View.propTypes,
-      onItemSelected: React.PropTypes.func,
-      data: PropTypes.array,
-      isCurved: PropTypes.bool,
-      isCyclic: PropTypes.bool,
-      isAtmospheric: PropTypes.bool,
-      selectedItemTextColor: PropTypes.string,
-      itemSpace: PropTypes.number,
-      visibleItemCount: PropTypes.number,
-      renderIndicator: PropTypes.bool,
-      indicatorColor: PropTypes.string,
-      isCurtain: PropTypes.bool,
-      curtainColor: PropTypes.string,
-      itemTextColor: PropTypes.string,
-      itemTextSize: PropTypes.number,
-      itemTextFontFamily: PropTypes.string,
-      selectedItemPosition: PropTypes.number,
-      backgroundColor: PropTypes.string,
-};
+
 module.exports = WheelPicker;

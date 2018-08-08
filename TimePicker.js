@@ -126,13 +126,6 @@ class TimePicker extends React.Component {
 
 }
 
-TimePicker.propTypes = {
-  initDate: React.PropTypes.string,
-  onTimeSelected: React.PropTypes.func,
-  hours: React.PropTypes.array,
-  minutes: React.PropTypes.array,
-};
-
 // it takes in format '12 AM' and return 24 format
 function hourTo24Format(hour) {
   return parseInt(moment(hour, ['h A']).format('H'), 10);
